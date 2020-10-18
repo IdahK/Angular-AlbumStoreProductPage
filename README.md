@@ -55,13 +55,13 @@ This data is collected by the `Product service as JSON data and displayed in the
 * `Product Service` - Makes a HTTP Request for JSON data and refactor the HTML Content in the Product Description template to display values from the response.
 
 #### Interfaces
-* `Album Interface` - Interface for Album data to define the structure/types of our fetched album data
-* `Product Interface` - Interface for Product data to define the structure/types of our fetched products data
+*  `Album Interface` - Interface for Album data to define the structure/types of our fetched album data
+*  `Product Interface` - Interface for Product data to define the structure/types of our fetched products data
 
 #### Endpoints/Routes
-* `/products` - List products which are the albums (displays the product-list template)
-* `/product/:id` - Display album data plus a list of tracks under that album (displays the product-page template)
-* `/` - Renders the /products route as default.
+*  `/products` - List products which are the albums (displays the product-list template)
+*  `/product/:id` - Display album data plus a list of tracks under that album (displays the product-page template)
+*  `/` - Renders the /products route as default.
 
 #### Things to remember/note:
 * Remember to always register your service as a provider in the `app.module.ts` file.

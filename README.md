@@ -33,14 +33,32 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## **App Structure**
 
+In this app, a list of albums(products) , fetched from JSON(album.json), are displayed as hyperlinks.
+
+Once an album is selected, the user is redirected to another page containing more details album such as Artist Name, Year of Release and a list of tracks under that album.
+
+This data is collected by the Product service as JSON data and displayed in the respective component templates where the service is called.
+
 #### Components
 
-* Product-description
+* Product-description - Component that displays album data such as Album name, Artist name and Year of Release.
 
-* Product-list
-* Product-page
-* Product-tracklisting
-* App
+* Product-list - displays a list of all albums as links
+
+* Product-page - Displays the product-description and the product-tracklisting components
+
+* Product-tracklisting - Component that fetches and displays album's tracks data
+
+* App - Entry point from which the application is rendered.
 
 #### Services
-* Product Service
+* Product Service - Makes a HTTP Request for JSON data and refactor the HTML Content in the Product Description template to display values from the response.
+
+#### Interfaces
+* Album Interface - Interface for Album data to define the structure/types of our fetched album data
+* Product Interface - Interface for Product data to define the structure/types of our fetched products data
+
+#### Endpoints/Routes
+* /products - List products which are the albums (displays the product-list template)
+* /product/:id - Display album data plus a list of tracks under that album
+* / - Renders the /products route as default.
